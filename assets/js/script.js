@@ -50,7 +50,7 @@ function searchFormSubmit(event) {
     localStorage.setItem("history", JSON.stringify(historyArr));
 
     // fetch API for current weather - using parameter 'weather' according to the API doc and converting to imperial UOM
-    var queryToday = 'http://api.openweathermap.org/data/2.5/weather?q=' + cityInput + "&units=imperial" + "&appid=" + apiKey;
+    var queryToday = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityInput + "&units=imperial" + "&appid=" + apiKey;
     fetch(queryToday)
         .then(response => response.json())
         .then(data => {
@@ -71,7 +71,7 @@ function searchFormSubmit(event) {
         })
 
     // fetch API for daily forecast - using 'parameter' forecast according to the API doc and converting to imperial UOM
-    var queryForecast = 'http://api.openweathermap.org/data/2.5/forecast?q=' + cityInput + "&units=imperial" + "&appid=" + apiKey;
+    var queryForecast = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityInput + "&units=imperial" + "&appid=" + apiKey;
 
     fetch(queryForecast)
         .then(response => response.json())
