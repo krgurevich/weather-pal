@@ -68,6 +68,8 @@ function searchFormSubmit(event) {
             // apply style to data content
             resultTodayEl.innerHTML = resultHTML;
             resultTodayEl.style.marginTop = "15px"
+            resultTodayEl.style.border = "solid 0.5px #eaeaea"
+            resultTodayEl.style.padding = "15px"
         })
 
     // fetch API for daily forecast - using 'parameter' forecast according to the API doc and converting to imperial UOM
